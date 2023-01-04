@@ -3,6 +3,9 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import styled from "styled-components";
 
 const ShareKakaotalk = (props) => {
+  useEffect(() => {
+    <Button></Button>;
+  }, []);
   const shareToKatalk = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
