@@ -47,22 +47,16 @@ const ShareKakaotalk = (props) => {
           },
         ],
       });
+    } else {
+      alert("공유가 지원되지않는 환경입니다.");
     }
   };
 
   return (
     <>
-      {window.innerWidth <= 640 ? (
-        <RiKakaoTalkFill
-          size="60"
-          id="kakao-link-btn"
-          onClick={() => shareToKatalk()}
-        ></RiKakaoTalkFill>
-      ) : (
-        <Button id="kakao-link-btn" onClick={() => shareToKatalk()}>
-          <RiKakaoTalkFill size="60"></RiKakaoTalkFill>
-        </Button>
-      )}
+      <Button id="kakao-link-btn" onClick={() => shareToKatalk()}>
+        <RiKakaoTalkFill size="60"></RiKakaoTalkFill>
+      </Button>
     </>
   );
 };
