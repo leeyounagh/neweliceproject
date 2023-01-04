@@ -1,0 +1,52 @@
+ {
+  "card":[{
+    "id": 0,
+    "name": "자기소개",
+    "src": "자기소개.jpg",
+    "desc": "이름:이수연 ",
+    "desc1": "전공:관광학과 ",
+    "desc2": "Mbti:ESFP"
+  },
+  {
+    "id": 1,
+    "name": "장점",
+    "src": "https://i.pinimg.com/564x/03/1c/37/031c3793451dc482afee2c4da2b10c1a.jpg",
+    "desc": "무한긍정",
+    "desc1": "목표로 한일을 끝까지 함",
+    "desc2": "사교성이 좋음"
+  },
+  {
+    "id": 2,
+    "name": "단점",
+    "src": "https://i.pinimg.com/564x/d7/b4/ef/d7b4efa0bf1952e7318fe45d8ab45a56.jpg",
+    "desc": "거절을 잘못함",
+    "desc1": "술은 좋아하나 잘못마심",
+    "desc2": "하나 꽂히면 그것만 함"
+  },
+  {
+    "id": 3,
+    "name": "좋아하는것",
+    "src": "https://i.pinimg.com/564x/b5/4c/a7/b54ca7a0289a664eccda62712319b8f8.jpg",
+    "desc": "여행",
+    "desc1": "고기",
+    "desc2": "쿠로미"
+  },
+  {
+    "id": 4,
+    "name": "싫어하는것",
+    "src": "https://i.pinimg.com/564x/29/8f/5a/298f5abc59d6eb8d02d5f0ca0cbe2964.jpg",
+    "desc": "야채",
+    "desc1": "배려 없는사람"
+  },
+  {
+    "id": 5,
+    "name": "취미",
+    "src": "여행.jpg",
+    "desc": "여행",
+    "desc1": "맛집탐방",
+    "desc2": "게임"
+  }
+  ]
+ }
+
+
