@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import styled from "styled-components";
 
