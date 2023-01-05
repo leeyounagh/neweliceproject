@@ -70,7 +70,6 @@ const MobileContainer = styled.div`
 const NavbarContainer = styled.nav`
   width: 100vw;
   height: 10vh;
-
   padding-top: 30px;
   z-index: 5;
   display: flex;
@@ -79,7 +78,6 @@ const NavbarContainer = styled.nav`
 const MenuContainer = styled.div`
   width: 40vw;
   height: 10vh;
-
   display: flex;
   justify-content: space-around;
 `;
