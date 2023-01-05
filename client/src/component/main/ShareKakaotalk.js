@@ -19,7 +19,7 @@ const ShareKakaotalk = (props) => {
       // 중복 initialization 방지
       if (!kakao.isInitialized()) {
         // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-        kakao.init(REACT_APP_KAKAOTALK_KEY);
+        kakao.init("3e05bdbf74cf401ace1555060c34d34f");
       }
 
       kakao.Link.createDefaultButton({
