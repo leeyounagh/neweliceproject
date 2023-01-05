@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import styled from "styled-components";
 
+const { REACT_APP_KAKAOTALK_KEY } = process.env;
+
 const ShareKakaotalk = (props) => {
   useEffect(() => {
-    <Button></Button>;
+    shareToKatalk();
   }, []);
+
   const shareToKatalk = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
@@ -13,7 +16,7 @@ const ShareKakaotalk = (props) => {
       // 중복 initialization 방지
       if (!kakao.isInitialized()) {
         // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-        kakao.init("3e05bdbf74cf401ace1555060c34d34f");
+        kakao.init(REACT_APP_KAKAOTALK_KEY);
       }
 
       kakao.Link.createDefaultButton({
@@ -47,16 +50,22 @@ const ShareKakaotalk = (props) => {
           },
         ],
       });
-    } else {
-      alert("공유가 지원되지않는 환경입니다.");
     }
   };
 
   return (
     <>
-      <Button id="kakao-link-btn" onClick={() => shareToKatalk()}>
-        <RiKakaoTalkFill size="60"></RiKakaoTalkFill>
-      </Button>
+      {window.innerWidth <= 640 ? (
+        <RiKakaoTalkFill
+          size="60"
+          id="kakao-link-btn"
+          onClick={() => shareToKatalk()}
+        ></RiKakaoTalkFill>
+      ) : (
+        <Button id="kakao-link-btn" onClick={() => shareToKatalk()}>
+          <RiKakaoTalkFill size="60"></RiKakaoTalkFill>
+        </Button>
+      )}
     </>
   );
 };

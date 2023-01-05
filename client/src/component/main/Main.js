@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Sidebar from "./sideBar/Sidebar";
-import SoundBar from "../navbar/SoundBar";
 
 const Main = () => {
   const [cdCheck, setCdCheck] = useState(false);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       setCdCheck(true);
@@ -13,7 +23,6 @@ const Main = () => {
 
   return (
     <MainContainer>
-      {window.innerWidth <= 640 ? null : <SoundBar></SoundBar>}
       {window.innerWidth <= 640 ? null : (
         <SidebarContainer>
           <Sidebar />
