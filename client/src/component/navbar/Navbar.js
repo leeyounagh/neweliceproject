@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import MobileNavbar from "./MobileNavbar";
 
-import MobileSound from "./MobileSound";
 import axios from "axios";
 
 const Navbar = () => {
@@ -38,7 +37,6 @@ const Navbar = () => {
       {window.innerWidth <= 640 ? (
         <>
           <MobileRenderer></MobileRenderer>
-          <MobileSound></MobileSound>
         </>
       ) : (
         <NavbarContainer>
@@ -77,6 +75,7 @@ const NavbarContainer = styled.nav`
   z-index: 5;
   display: flex;
   justify-content: center;
+  background-color: rgb(252, 246, 244);
 `;
 const MenuContainer = styled.div`
   width: 40vw;

@@ -24,7 +24,7 @@ const Cardswiper = () => {
   return (
     <CardSwiperContainer>
       <StyledSwiper effect={"cards"} grabCursor={true} modules={[EffectCards]}>
-        {card.map((item, index) => {
+        {card.map((item) => {
           return (
             <CardDiv>
               <SwiperSlide
@@ -85,7 +85,6 @@ const SwiperDesc = styled.div`
 const StyledSwiper = styled(Swiper)`
   width: 560px;
   height: 720px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +119,6 @@ const CardDiv = styled.div`
 const CardSwiperContainer = styled.div`
   width: 100%;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;

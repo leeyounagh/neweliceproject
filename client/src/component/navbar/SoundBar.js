@@ -13,7 +13,6 @@ const SoundBar = () => {
   const handleClick = () => {
     setClick(!click);
     if (!click) {
-      //
       ref.current.play();
     } else {
       ref.current.pause();
@@ -22,8 +21,8 @@ const SoundBar = () => {
 
   return (
     <>
-      {window.innerWidth <= 640 ? null : (
-        <Box onClick={() => handleClick()}>
+      {/* {window.innerWidth <= 640 ? null : (
+        <Box id={window.innerWidth} onClick={() => handleClick()}>
           <Line click={click} />
           <Line click={click} />
           <Line click={click} />
@@ -32,7 +31,16 @@ const SoundBar = () => {
 
           <audio src="good.mp3" ref={ref} autoPlay />
         </Box>
-      )}
+      )} */}
+      <Box id={window.innerWidth} onClick={() => handleClick()}>
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+
+        <audio src="good.mp3" ref={ref} autoPlay />
+      </Box>
     </>
   );
 };
@@ -41,8 +49,9 @@ const Box = styled.div`
   cursor: pointer;
 
   position: fixed;
-  left: 8rem;
-  top: 3rem;
+  left: ${(props) => (props.id <= 640 ? "18rem" : "8rem")};
+
+  top: ${(props) => (props.id <= 640 ? "2rem" : "3rem")};
   z-index: 10;
 
   & > *:nth-child(1) {

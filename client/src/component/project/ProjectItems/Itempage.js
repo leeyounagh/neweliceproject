@@ -4,7 +4,6 @@ import { TbPlayerPlay } from "react-icons/tb";
 import { TbPlayerSkipBack } from "react-icons/tb";
 import { TbPlayerSkipForward } from "react-icons/tb";
 import axios from "axios";
-// import projectDesc from "./projectDesc";
 
 const videoSrc = [
   {

@@ -43,11 +43,10 @@ const SkillDesc = () => {
 const SkillDescContainer = styled.div`
   padding: 30px;
   width: 100%;
-  height: 100%;
+  height: 90%;
   margin-left: 100px;
   border: 2px solid black;
   text-align: center;
-  display: grid;
   background-color: rgb(252, 246, 244);
   &:hover {
     background-color: black;
@@ -59,25 +58,18 @@ const SkillDescContainer = styled.div`
     width: 80%;
     height: 600px;
     margin: 5px;
-    display: block;
   }
 `;
 const SkillTitleDiv = styled.div`
-  font-size: 1.5rem;
-  margin-top: 5px;
-  width: 100%;
-  height: 8%;
-  text-align: center;
+  font-size: 2rem;
+  margin-top: 15px;
   @media (max-width: 640px) {
     font-size: 1.3rem;
   }
 `;
 const SkillInnerText = styled.div`
-  font-size: 1.2rem;
-  margin-top: 10px;
-
-  width: 100%;
-  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
   font-family: "KIMM_Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2")
     format("woff2");

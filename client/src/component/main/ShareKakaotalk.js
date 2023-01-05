@@ -6,17 +6,20 @@ const { REACT_APP_KAKAOTALK_KEY } = process.env;
 
 const ShareKakaotalk = (props) => {
   useEffect(() => {
-    shareToKatalk();
+    <Button></Button>;
+  }, []);
+  useEffect(() => {
+    getKaKaotalkInfo();
   }, []);
 
-  const shareToKatalk = () => {
+  const getKaKaotalkInfo = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
 
       // 중복 initialization 방지
       if (!kakao.isInitialized()) {
         // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-        kakao.init("3e05bdbf74cf401ace1555060c34d34f");
+        kakao.init(REACT_APP_KAKAOTALK_KEY);
       }
 
       kakao.Link.createDefaultButton({
@@ -59,10 +62,10 @@ const ShareKakaotalk = (props) => {
         <RiKakaoTalkFill
           size="60"
           id="kakao-link-btn"
-          onClick={() => shareToKatalk()}
+          onClick={() => getKaKaotalkInfo()}
         ></RiKakaoTalkFill>
       ) : (
-        <Button id="kakao-link-btn" onClick={() => shareToKatalk()}>
+        <Button id="kakao-link-btn" onClick={() => getKaKaotalkInfo()}>
           <RiKakaoTalkFill size="60"></RiKakaoTalkFill>
         </Button>
       )}
