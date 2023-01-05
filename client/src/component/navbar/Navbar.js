@@ -75,7 +75,6 @@ const NavbarContainer = styled.nav`
   z-index: 5;
   display: flex;
   justify-content: center;
-  background-color: rgb(252, 246, 244);
 `;
 const MenuContainer = styled.div`
   width: 40vw;
