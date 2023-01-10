@@ -43,7 +43,7 @@ const SkillDesc = () => {
 const SkillDescContainer = styled.div`
   padding: 30px;
   width: 100%;
-  height: 90%;
+  height: 100%;
   margin-left: 100px;
   border: 2px solid black;
   text-align: center;
